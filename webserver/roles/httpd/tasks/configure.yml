@@ -1,6 +1,6 @@
 ---
-- name: configure httpd
-  tasks:
-    - copy:
-        src: files/index.html
-        dest: /var/www/html/
+  - name: configure httpd
+    copy:
+      src: files/index.html
+      dest: /var/www/html/
+    tags: configure_httpd

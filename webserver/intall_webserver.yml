@@ -1,0 +1,5 @@
+---
+  - name: install and  configure webserver
+    hosts: rocky
+    roles:
+      - httpd

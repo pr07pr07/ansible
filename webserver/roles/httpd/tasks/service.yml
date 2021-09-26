@@ -1,7 +1,7 @@
 ---
   - name: start httpd service
-    tasks:
-      service:
-        name: httpd
-        state: started
-        enabled: yes
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+    tags: start_httpd
