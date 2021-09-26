@@ -1,0 +1,14 @@
+---
+- name : List summary of existing buckets in OCI object storage
+  collections:
+    - oracle.oci
+  connection: local
+  hosts: localhost
+  tasks:
+    - name: List instances
+      oci_compute_instance_facts:
+        compartment_id: "ocid1.compartment.oc1..aaaaaaaag3co7dacpjb337knaxptfhyox45xrqxfmwk4utqtw6b7czxv6lla"
+      register: result
+    - name: Dump result
+      debug: 
+        msg: '{{result}}'
