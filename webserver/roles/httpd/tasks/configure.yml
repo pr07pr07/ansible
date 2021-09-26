@@ -3,4 +3,5 @@
     copy:
       src: files/index.html
       dest: /var/www/html/
+    notify: restart httpd
     tags: configure_httpd

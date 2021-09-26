@@ -1,0 +1,7 @@
+---
+  - name: generate page using template
+    template:
+      src: templates/template_page.j2
+      dest: /var/www/html/template_page.html
+    notify: restart httpd
+    tags: templatepage
