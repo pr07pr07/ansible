@@ -2,4 +2,4 @@
   - name: install and  configure webserver
     hosts: all
     roles:
-      - httpd
+      - roles/httpd

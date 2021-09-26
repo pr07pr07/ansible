@@ -1,0 +1,8 @@
+---
+# vars file for roles/packages
+
+packages:
+  - vim
+  - curl
+  - jq
+  - tmux
