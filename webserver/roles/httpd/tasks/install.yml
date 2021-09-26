@@ -1,6 +1,0 @@
----
-  - name: install httpd
-    dnf:
-      name: httpd
-      state: latest
-    tags: install_httpd

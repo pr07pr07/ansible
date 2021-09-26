@@ -1,6 +1,33 @@
 ---
 # tasks file for httpd
-  - import_tasks: install.yml
-  - import_tasks: configure.yml
-  - import_tasks: service.yml
-  - import_tasks: use_template.yml
+  - import_tasks: rocky_install.yml
+    when:
+      ansible_facts['os_family']|lower == 'rocky'
+
+  - import_tasks: debian_install.yml
+    when:
+      ansible_facts['os_family']|lower == 'debian'
+
+  - import_tasks: rocky_configure.yml
+    when:
+      ansible_facts['os_family']|lower == 'rocky'
+
+  - import_tasks: debian_configure.yml
+    when:
+      ansible_facts['os_family']|lower == 'debian'
+
+  - import_tasks: rocky_service.yml
+    when:
+      ansible_facts['os_family']|lower == 'rocky'
+  
+  - import_tasks: debian_service.yml
+    when:
+      ansible_facts['os_family']|lower == 'debian'
+
+  - import_tasks: rocky_template.yml
+    when:
+      ansible_facts['os_family']|lower == 'rocky'
+
+  - import_tasks: debian_template.yml
+    when:
+      ansible_facts['os_family']|lower == 'debian'

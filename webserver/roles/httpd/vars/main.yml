@@ -1,2 +1,5 @@
 ---
 # vars file for httpd
+OS_DISTRIBUTION: "{{ ansible_facts['distribution'] | upper }}"
+OS_VERSION: "{{ ansible_facts['distribution_version'] | upper }}"
+SERVER_NAME: "{{ ansible_facts['nodename'] | upper }}"
