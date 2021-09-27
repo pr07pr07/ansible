@@ -1,6 +1,6 @@
 ---
-  - name: configure apache2
+  - name: configure httpd
     template:
       src: templates/index.j2
       dest: /var/www/html/index.html
-    notify: restart apache2
+    notify: restart httpd
