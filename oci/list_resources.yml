@@ -12,3 +12,10 @@
     - name: Dump result
       debug: 
         msg: '{{result}}'
+    - name: List vcns
+      oci_network_vcn_facts:
+        compartment_id: "ocid1.compartment.oc1..aaaaaaaahkhvj2skdw3ty7fnhg6jop5tr5ie3muwbcmlhsy426zxamtajpgq"
+      register: result
+    - name: Dump result
+      debug: 
+        msg: '{{result}}'
