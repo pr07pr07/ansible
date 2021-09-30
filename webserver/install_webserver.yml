@@ -1,5 +1,8 @@
 ---
   - name: install and  configure webserver
     hosts: all
+    vars_prompt:
+      - name: message
+        prompt: Enter the secret to display
     roles:
       - roles/httpd

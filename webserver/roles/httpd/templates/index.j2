@@ -2,5 +2,9 @@
 <body style="background-color:rgb(17, 17, 17);">
     <h1 style="text-align:center;color:white;font-size:300%;">My Test Page from <span style="color:rgb(160, 15, 15);"><b>{{ SERVER_NAME }}</b></span> </h1>
     <p style="text-align:center;color:rgb(255, 255, 255);font-size:160%">This is created using Ansible with httpd role</p>
+    <p style="text-align:center;color:rgb(255, 255, 255);font-size:160%">The message you entered is : {{message}}</p>
+    <p style="text-align:center;color:rgb(255, 255, 255);font-size:160%">Secret from encrypted string in vars dir : {{SECRET}}</p>
+    <p style="text-align:center;color:rgb(255, 255, 255);font-size:160%">Secret1 from encrypted varible file : {{secret1}}</p>
+    <p style="text-align:center;color:rgb(255, 255, 255);font-size:160%">Secret2 from encrypted varible file : {{secret2}}</p>
 </body>
 </html>
