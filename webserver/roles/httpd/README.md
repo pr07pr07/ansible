@@ -1,12 +1,12 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This is for installing & configuring webserver
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+the role uses templates & vault for demonstration
 
 Role Variables
 --------------
@@ -21,12 +21,9 @@ A list of other roles hosted on Galaxy should go here, plus any details in regar
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
-
+ ansible-playbook install_webserver.yml -i oci-server1,  -e @secret_varibles.txt -b -K --ask-vault-pass
+ 
+ 
 License
 -------
 
